@@ -82,6 +82,9 @@ typedef NS_ENUM(NSInteger, RCTCameraTorchMode) {
 - (void)capture:(NSDictionary*)options resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject;
 - (void)getFOV:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject;
 - (void)hasFlash:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject;
+- (void)makeGif:(NSArray *)images callback:(RCTResponseSenderBlock)callback;
+- (void)getExposureCompensationRange:(RCTResponseSenderBlock)callback;
+- (void)setExposureCompensation:(float)value;
 - (void)initializeCaptureSessionInput:(NSString*)type;
 - (void)stopCapture;
 - (void)startSession;
